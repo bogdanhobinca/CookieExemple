@@ -7,13 +7,14 @@
 <body>
 <?php
 
-    if (isset($_COOKIE['access-level']) && $_COOKIE['access-level']=="standard"){
+    if (isset($_COOKIE['access-level'])){
         displayAccessLevel($_COOKIE['access-level']);
     }else{
         echo "<p>Not allowed</p>";
     }
 
     function displayAccessLevel($acceessLevel){
+        echo "<p>Welcome!</p>";
         if ($acceessLevel == "standard"){
             echo "<p>You are currently logged in as a standard user</p>";
         }else if ($acceessLevel=="root"){
@@ -22,6 +23,5 @@
         }
     }
 ?>
-<h1>Welcome!</h1>
 </body>
 </html>
